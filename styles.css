@@ -370,8 +370,8 @@ body {
 }
 
 .status-pill.urgent {
-    background-color: rgba(0, 77, 153, 0.2);
-    color: #004D99;
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #DC3545;
 }
 
 .status-pill.in-progress {
