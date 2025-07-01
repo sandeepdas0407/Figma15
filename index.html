@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVS Agent Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Notification Bar -->
+        <div class="notification-bar">
+            <div class="notification-content">
+                <img src="images/exclamation-triangle.svg" alt="Exclamation Triangle" class="notification-icon">
+                <span>Your claim for member #839274615 has been outstanding for (3) days</span>
+            </div>
+            <button class="close-btn">
+                <img src="images/times.svg" alt="Close">
+            </button>
+        </div>
+
+        <div class="main-container-wrapper">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="images/profile-image.png" alt="Profile Image">
+                </div>
+                <div class="profile-info">
+                    <h2>Marquez, Kate</h2>
+                    <div class="profile-pill">
+                        <span>Client Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Data Table -->
+                <div class="data-table">
+                    <div class="table-nav">
+                        <div class="title">
+                            <img src="images/clipboard-icon.svg" alt="Clipboard Icon" class="table-icon">
+                            <h3>Your claims</h3>
+                            <div class="count-bubble">
+                                <span>32</span>
+                            </div>
+                        </div>
+                        <div class="search-arrows">
+                            <div class="search-field">
+                                <div class="search-input">
+                                    <img src="images/search-icon.svg" alt="Search Icon">
+                                    <input type="text" placeholder="Search Rx#, member no., drug name, etc... ">
+                                </div>
+                            </div>
+                            <div class="arrows">
+                                <div class="arrow-buttons">
+                                    <button class="arrow-left">
+                                        <img src="images/chevron-left.svg" alt="Previous">
+                                    </button>
+                                    <button class="arrow-right">
+                                        <img src="images/chevron-right.svg" alt="Next">
+                                    </button>
+                                </div>
+                                <div class="key-button">
+                                    <span>C</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="filter-pills">
+                        <button class="filter-pill active">Name</button>
+                        <button class="filter-pill">Pharmacy</button>
+                        <button class="filter-pill">Date</button>
+                        <button class="filter-pill">Rx Number</button>
+                    </div>
+                    <div class="table-header">
+                        <div class="header-cell">Rx #</div>
+                        <div class="header-cell">Status</div>
+                        <div class="header-cell">Member #</div>
+                        <div class="header-cell">Drug Name</div>
+                        <div class="header-cell">Date of Fill</div>
+                        <div class="header-cell">Previous PA</div>
+                        <div class="header-cell">Overwrite PA</div>
+                        <div class="header-cell">AI Insights*</div>
+                        <div class="header-cell">MD Comment</div>
+                    </div>
+                    <div class="table-data">
+                        <!-- Row 1 -->
+                        <div class="table-row">
+                            <div class="data-row">
+                                <div class="data-cell rx-number">032487591</div>
+                                <div class="data-cell">
+                                    <div class="status-pill urgent">Urgent</div>
+                                </div>
+                                <div class="data-cell">839274615</div>
+                                <div class="data-cell">ADDERALL</div>
+                                <div class="data-cell">05/05/2025</div>
+                                <div class="data-cell">Previous PA</div>
+                                <div class="data-cell">
+                                    <div class="toggle">
+                                        <div class="toggle-track">
+                                            <div class="toggle-handle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-cell ai-insights">Read summary</div>
+                                <div class="data-cell">Patient failed formulary alter</div>
+                            </div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="table-row alt-row">
+                            <div class="data-row">
+                                <div class="data-cell rx-number">842039175</div>
+                                <div class="data-cell">
+                                    <div class="status-pill urgent">Urgent</div>
+                                </div>
+                                <div class="data-cell">A739285104</div>
+                                <div class="data-cell">ZETONNA</div>
+                                <div class="data-cell">05/14/2025</div>
+                                <div class="data-cell">Previous PA</div>
+                                <div class="data-cell">
+                                    <div class="toggle">
+                                        <div class="toggle-track">
+                                            <div class="toggle-handle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-cell ai-insights">Read summary</div>
+                                <div class="data-cell">Requires this drug due to allergy to others</div>
+                            </div>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="table-row">
+                            <div class="data-row">
+                                <div class="data-cell rx-number">605183942</div>
+                                <div class="data-cell">
+                                    <div class="status-pill urgent">Urgent</div>
+                                </div>
+                                <div class="data-cell">2049837165</div>
+                                <div class="data-cell">DORYX</div>
+                                <div class="data-cell">05/08/2025</div>
+                                <div class="data-cell">Previous PA</div>
+                                <div class="data-cell">
+                                    <div class="toggle">
+                                        <div class="toggle-track">
+                                            <div class="toggle-handle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-cell ai-insights">Read summary</div>
+                                <div class="data-cell">Stable on current therapy for 12+ months.</div>
+                            </div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="table-row alt-row">
+                            <div class="data-row">
+                                <div class="data-cell rx-number">984120376</div>
+                                <div class="data-cell">
+                                    <div class="status-pill in-progress">In progress</div>
+                                </div>
+                                <div class="data-cell">J183746592</div>
+                                <div class="data-cell">SIMPONI</div>
+                                <div class="data-cell">05/02/2025</div>
+                                <div class="data-cell">Previous PA</div>
+                                <div class="data-cell">
+                                    <div class="toggle">
+                                        <div class="toggle-track">
+                                            <div class="toggle-handle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-cell ai-insights">Read summary</div>
+                                <div class="data-cell">Generic alternative not tolerated.</div>
+                            </div>
+                        </div>
+                        <!-- Row 5 -->
+                        <div class="table-row">
+                            <div class="data-row">
+                                <div class="data-cell rx-number">712490385</div>
+                                <div class="data-cell">
+                                    <div class="status-pill done">Done</div>
+                                </div>
+                                <div class="data-cell">593820174</div>
+                                <div class="data-cell">XANAX</div>
+                                <div class="data-cell">05/18/2025</div>
+                                <div class="data-cell">Previous PA</div>
+                                <div class="data-cell">
+                                    <div class="toggle">
+                                        <div class="toggle-track">
+                                            <div class="toggle-handle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-cell ai-insights">Read summary</div>
+                                <div class="data-cell">Specialist recommends this as first-line.</div>
+                            </div>
+                        </div>
+                        <!-- Row 6 -->
+                        <div class="table-row alt-row">
+                            <div class="data-row">
+                                <div class="data-cell rx-number">439275018</div>
+                                <div class="data-cell">
+                                    <div class="status-pill in-progress">In progress</div>
+                                </div>
+                                <div class="data-cell">KZ937461820</div>
+                                <div class="data-cell">SABRIL</div>
+                                <div class="data-cell">05/17/2025</div>
+                                <div class="data-cell">Previous PA</div>
+                                <div class="data-cell">
+                                    <div class="toggle">
+                                        <div class="toggle-track">
+                                            <div class="toggle-handle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-cell ai-insights">Read summary</div>
+                                <div class="data-cell">Medical necessity due to severity of symptoms.</div>
+                            </div>
+                        </div>
+                        <!-- Row 7 -->
+                        <div class="table-row">
+                            <div class="data-row">
+                                <div class="data-cell rx-number">150382964</div>
+                                <div class="data-cell">
+                                    <div class="status-pill done">Done</div>
+                                </div>
+                                <div class="data-cell">84730295176</div>
+                                <div class="data-cell">VALCYTE</div>
+                                <div class="data-cell">05/11/2025</div>
+                                <div class="data-cell">Previous PA</div>
+                                <div class="data-cell">
+                                    <div class="toggle">
+                                        <div class="toggle-track">
+                                            <div class="toggle-handle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-cell ai-insights">Read summary</div>
+                                <div class="data-cell">Condition worsened on step therapy option.</div>
+                            </div>
+                        </div>
+                        <!-- Row 8 -->
+                        <div class="table-row alt-row">
+                            <div class="data-row">
+                                <div class="data-cell rx-number">287530194</div>
+                                <div class="data-cell">
+                                    <div class="status-pill urgent">Urgent</div>
+                                </div>
+                                <div class="data-cell">D582039174</div>
+                                <div class="data-cell">KAMDOY</div>
+                                <div class="data-cell">05/13/2025</div>
+                                <div class="data-cell">Previous PA</div>
+                                <div class="data-cell">
+                                    <div class="toggle">
+                                        <div class="toggle-track">
+                                            <div class="toggle-handle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-cell ai-insights">Read summary</div>
+                                <div class="data-cell">Patient requires specific formulation (e.g., extended release)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panels -->
+                <div class="right-panel">
+                    <!-- Claim Insights Panel -->
+                    <div class="panel claim-insights">
+                        <div class="panel-header">
+                            <div class="panel-title">
+                                <img src="images/medical-file-icon.svg" alt="Medical File Icon" class="panel-icon">
+                                <h3>Claim insights</h3>
+                            </div>
+                            <div class="key-button">
+                                <span>I</span>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="panel-data">
+                            <div class="insights-row">
+                                <div class="insight-box">
+                                    <div class="insight-icon">
+                                        <img src="images/care-plan-icon.svg" alt="Care Plan Icon">
+                                    </div>
+                                    <div class="insight-number">10</div>
+                                    <div class="insight-text">
+                                        <p>Claims in progress</p>
+                                        <small>Updated May 12</small>
+                                    </div>
+                                </div>
+                                <div class="insight-box">
+                                    <div class="insight-icon">
+                                        <img src="images/rejected-claims-icon.svg" alt="Rejected Claims Icon">
+                                    </div>
+                                    <div class="insight-number">35</div>
+                                    <div class="insight-text">
+                                        <p>Rejected claims</p>
+                                        <small>Updated May 13</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Claim Progress Panel -->
+                    <div class="panel claim-progress">
+                        <div class="panel-header">
+                            <div class="panel-title">
+                                <img src="images/pharmacy-icon.svg" alt="Pharmacy Icon" class="panel-icon">
+                                <h3>Claim progress</h3>
+                            </div>
+                            <div class="key-button">
+                                <span>P</span>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="panel-data">
+                            <div class="progress-row">
+                                <div class="progress-text">Claim #43533 has moved from PA to Rx delivery</div>
+                                <button class="view-claim-btn">View claim</button>
+                            </div>
+                            <div class="progress-row alt-row">
+                                <div class="progress-text">Aetna has been notified about the PA for claim #09890</div>
+                                <button class="view-claim-btn">View claim</button>
+                            </div>
+                            <div class="progress-row">
+                                <div class="progress-text">CVS #434 has filled Rx for member #420998</div>
+                                <button class="view-claim-btn">View claim</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notifications Panel -->
+                    <div class="panel notifications">
+                        <div class="panel-header">
+                            <div class="panel-title">
+                                <img src="images/chat-icon.svg" alt="Chat Icon" class="panel-icon">
+                                <h3>Notifications</h3>
+                                <div class="count-bubble small">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div class="arrows">
+                                <div class="arrow-buttons">
+                                    <button class="arrow-left">
+                                        <img src="images/chevron-left.svg" alt="Previous">
+                                    </button>
+                                    <button class="arrow-right">
+                                        <img src="images/chevron-right.svg" alt="Next">
+                                    </button>
+                                </div>
+                                <div class="key-button">
+                                    <span>N</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="notification-row">
+                            <div class="notification-image">
+                                <img src="images/user-1.png" alt="Dr. Samuels">
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-header">
+                                    <div class="notification-name">
+                                        <span>Dr. Samuels</span>
+                                        <div class="tag">Clinical team</div>
+                                    </div>
+                                    <div class="notification-time">Today, 12:54 PM</div>
+                                </div>
+                                <div class="notification-text">
+                                    Needs further clarification on a recent PA for Member #842039175
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="notification-row">
+                            <div class="notification-image">
+                                <img src="images/user-2.png" alt="Sarah F.">
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-header">
+                                    <div class="notification-name">
+                                        <span>Sarah F.</span>
+                                        <div class="tag">Pharmacy</div>
+                                    </div>
+                                    <div class="notification-time">Today, 11:14 AM</div>
+                                </div>
+                                <div class="notification-text">
+                                    Needs more information about a recent PA authorization for GABITRIL
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="notification-row">
+                            <div class="notification-image">
+                                <img src="images/user-3.png" alt="Mark G.">
+                            </div>
+                            <div class="notification-content">
+                                <div class="notification-header">
+                                    <div class="notification-name">
+                                        <span>Mark G.</span>
+                                        <div class="tag">Help Desk</div>
+                                    </div>
+                                    <div class="notification-time">Yesterday, 5:31 PM</div>
+                                </div>
+                                <div class="notification-text">
+                                    Needs more information from a doctor for Claim #44932, received today at 11am
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Function Bar -->
+        <div class="function-wrapper">
+            <div class="functions">
+                <div class="search-field function-field">
+                    <span>Press ALT for functions...</span>
+                </div>
+                <div class="function-btn active">
+                    <span>Claim insights</span>
+                    <div class="key-button small">
+                        <span>I</span>
+                    </div>
+                </div>
+                <div class="function-btn">
+                    <span>Claim progress</span>
+                    <div class="key-button small">
+                        <span>P</span>
+                    </div>
+                </div>
+                <div class="function-btn">
+                    <span>Claim notifications</span>
+                    <div class="key-button small">
+                        <span>N</span>
+                    </div>
+                </div>
+                <div class="function-btn">
+                    <span>Your claims</span>
+                    <div class="key-button small">
+                        <span>C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
