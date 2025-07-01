@@ -1,9 +1,0 @@
-{
-  "servers": {
-    "my-mcp-server-figma": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "figma-developer-mcp", "--figma-api-key=figd_ay5dTz5aOHa2uZt4_FfxWqnOd6F8_c1z2BOwIkA0", "--stdio"]
-    }
-  },
-}
